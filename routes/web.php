@@ -24,3 +24,7 @@ Route::get('/about',function (){
 Route::get('/contact',function (){
     return "Contact Page"; 
 });
+
+Route::get('/post/{id}',function ($id){
+    return "this is post number " . $id; 
+});

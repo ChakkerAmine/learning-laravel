@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,19 +18,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about',function (){
-    return "About Page"; 
-});
+// Route::get('/about',function (){
+//     return "About Page"; 
+// });
 
-Route::get('/contact',function (){
-    return "Contact Page"; 
-});
+// Route::get('/contact',function (){
+//     return "Contact Page"; 
+// });
 
-Route::get('/post/{id}',function ($id){
-    return "this is post number " . $id; 
-});
+// Route::get('/post/{id}',function ($id){
+//     return "this is post number " . $id; 
+// });
 
-Route::get('admin/posts/example',array('as'=>'admin.home',function(){
-    $url = route('admin.home');
-    return "this is url of : ".$url;
-})); 
+// Route::get('admin/posts/example',array('as'=>'admin.home',function(){
+//     $url = route('admin.home');
+//     return "this is url of : ".$url;
+// })); 
+
+Route::get('/post',[PostsController::class, 'index']); 

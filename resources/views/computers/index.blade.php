@@ -7,6 +7,22 @@
     <title>Computers</title>
 </head>
 <body>
-    Computers
+    <h1>Computers</h1> 
+    <hr>
+ 
+    <div class="data">
+        @if (count($computers) > 0)
+            <ul>
+                @foreach ($computers as $computer)
+                    <li>{{ $computer['name'] }} is from <strong>{{$computer['origin']}}</strong></li>
+                    <hr>
+                @endforeach
+            </ul>
+        @else 
+            <p>there is no Computer to display</p>
+        @endif
+       
+    </div>
+
 </body>
 </html>

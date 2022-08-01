@@ -39,12 +39,28 @@ Route::get('/', function () {
 // Route::resource('posts','PostsController');
 
 
-Route::get('/store',function(){
-    $filter = request('style');
-    if(!isset($filter)){
-        return 'there is no category with that name';
-    }else{
-        return 'this page is viewing  <span style="color:red" >'.strip_tags($filter).'</span>';
-    }
+// Route::get('/store',function(){
+//     $filter = request('style');
+//     if(!isset($filter)){
+//         return 'there is no category with that name';
+//     }else{
+//         return 'this page is viewing  <span style="color:red" >'.strip_tags($filter).'</span>';
+//     }
     
+// });
+
+
+
+Route::get('/store/{category?}/{item?}',function($category=null,$item=null){
+    if(isset($category)){
+        if(isset($item)){
+            return "<h1>{$item}<h1>";
+        }else{
+            return "<h1>{$category}<h1>";
+        }
+    }else{
+        return "All Products";
+    }
 });
+
+

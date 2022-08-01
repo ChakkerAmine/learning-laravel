@@ -15,6 +15,7 @@ use App\Http\Controllers\StaticController;
 */
 
 Route::get('/',[StaticController::class,"index"] );
+Route::get('/about',[StaticController::class,"about"]);
 
 // Route::get('/about',function (){
 //     return "About Page"; 

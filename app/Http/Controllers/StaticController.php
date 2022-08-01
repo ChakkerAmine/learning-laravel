@@ -8,6 +8,9 @@ class StaticController extends Controller
 {
     public function index(){
         // return "home page";
-        return view('welcome');
+        return view('welcome'); 
+    }
+    public function about(){
+        return view('about');
     }
 }

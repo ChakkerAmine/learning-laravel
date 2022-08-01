@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
-
+use App\Http\Controllers\StaticController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +14,7 @@ use App\Http\Controllers\PostsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[StaticController::class,"index"] );
 
 // Route::get('/about',function (){
 //     return "About Page"; 

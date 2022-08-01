@@ -35,4 +35,5 @@ Route::get('/', function () {
 //     return "this is url of : ".$url;
 // })); 
 
-Route::get('/post',[PostsController::class, 'index']); 
+// Route::get('/post',[PostsController::class, 'index']); 
+Route::resource('posts','PostsController');

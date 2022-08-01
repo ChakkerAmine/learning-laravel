@@ -36,4 +36,15 @@ Route::get('/', function () {
 // })); 
 
 // Route::get('/post',[PostsController::class, 'index']); 
-Route::resource('posts','PostsController');
+// Route::resource('posts','PostsController');
+
+
+Route::get('/store',function(){
+    $filter = request('style');
+    if(!isset($filter)){
+        return 'there is no category with that name';
+    }else{
+        return 'this page is viewing  <span style="color:red" >'.strip_tags($filter).'</span>';
+    }
+    
+});

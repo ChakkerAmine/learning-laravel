@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\StaticController;
+use App\Http\Controllers\ComputerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +17,17 @@ use App\Http\Controllers\StaticController;
 
 Route::get('/',[StaticController::class,"index"] );
 Route::get('/about',[StaticController::class,"about"]);
+
+// Route::get('/computers',[ComputerController::class],"index");
+
+// Route::get('/computer',[ComputerController::class,"index"] );
+
+Route::resource('computer', ComputerController::class);
+
+
+// Route::resource('computers',[ComputerController::class]);
+
+
 
 // Route::get('/about',function (){
 //     return "About Page"; 

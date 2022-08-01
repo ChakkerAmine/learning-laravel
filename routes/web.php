@@ -22,7 +22,8 @@ Route::get('/about',[StaticController::class,"about"]);
 
 // Route::get('/computer',[ComputerController::class,"index"] );
 
-Route::resource('computer', ComputerController::class);
+
+Route::resource('computers', ComputerController::class);
 
 
 // Route::resource('computers',[ComputerController::class]);

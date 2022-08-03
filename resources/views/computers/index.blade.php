@@ -14,7 +14,11 @@
         @if (count($computers) > 0)
             <ul>
                 @foreach ($computers as $computer)
-                    <li>{{ $computer['name'] }} is from <strong>{{$computer['origin']}}</strong></li>
+                    <li>
+                        <a href="{{route('computers.show',['computer'=>$computer['id']])}}">
+                            {{ $computer['name'] }} is from <strong>{{$computer['origin']}}</strong>
+                        </a>
+                    </li>
                     <hr>
                 @endforeach
             </ul>

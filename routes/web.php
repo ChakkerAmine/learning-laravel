@@ -28,7 +28,7 @@ Route::resource('computers', ComputerController::class);
 Route::get('/contact',[ComputerController::class,"contact"]);
 // Route::resource('computers',[ComputerController::class]);
 
-
+Route::get('post/{id}',[PostsController::class,"show_post"]);
 
 // Route::get('/about',function (){
 //     return "About Page"; 

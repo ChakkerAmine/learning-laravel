@@ -100,6 +100,7 @@ class ComputerController extends Controller
 
 
     public function contact(){
-        return view('contact');
+        $people = ['amine','merwan','Ali','hassan','simo'];
+        return view('contact',compact('people')); 
     }
 }

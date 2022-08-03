@@ -25,7 +25,7 @@ Route::get('/about',[StaticController::class,"about"]);
 
 Route::resource('computers', ComputerController::class);
 
-
+Route::get('/contact',[ComputerController::class,"contact"]);
 // Route::resource('computers',[ComputerController::class]);
 
 
